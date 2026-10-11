@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Symmetrical Check</title>
+</head>
+<body>
+
+    <h2>Symmetrical Word Checker</h2>
+
+    <input type="text" id="word" placeholder="Enter the word">
+    <button onclick="check()">Check</button>
+
+    <p id="result"></p>
+
+    <script>
+        function check() {
+            let str = document.getElementById("word").value;
+            let mid = Math.floor(str.length / 2);
+
+            if (str.substring(0, mid) ===
+                str.substring(str.length - mid)) {
+                document.getElementById("result").innerHTML =
+                    "Symmetrical";
+            } else {
+                document.getElementById("result").innerHTML =
+                    "Not symmetrical";
+            }
+        }
+    </script>
+
+</body>
+</html>
